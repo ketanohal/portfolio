@@ -1,0 +1,251 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #f39c12;
+}
+
+/* Home Section */
+.home-section {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-section .content {
+    text-align: center;
+    color: #fff;
+}
+
+.home-section h2 {
+    font-size: 3em;
+    animation: fadeInDown 1s ease-out;
+}
+
+.home-section p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.home-section .btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.home-section .btn:hover {
+    background: #e67e22;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+/* Skills Section */
+.skills-section {
+    background: #f9f9f9;
+    padding: 80px 0;
+}
+
+.skills-section .skill-bar {
+    margin-bottom: 20px;
+}
+
+.skills-section .progress {
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skills-section .html-css {
+    width: 90%;
+    background: #e67e22;
+    animation: fillBar 2s ease-in;
+}
+
+.skills-section .javascript {
+    width: 80%;
+    background: #f39c12;
+    animation: fillBar 2s ease-in;
+}
+
+.skills-section .react {
+    width: 75%;
+    background: #3498db;
+    animation: fillBar 2s ease-in;
+}
+
+.skills-section .node {
+    width: 70%;
+    background: #2ecc71;
+    animation: fillBar 2s ease-in;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 80px 0;
+}
+
+.projects-section .projects {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #3498db;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 80px 0;
+    background: #f4f4f4;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section input, .contact-section textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-section .btn {
+    padding: 10px 20px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-section .btn:hover {
+    background: #2980b9;
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
